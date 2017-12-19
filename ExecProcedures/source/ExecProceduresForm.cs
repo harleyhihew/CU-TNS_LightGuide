@@ -315,7 +315,7 @@ namespace ExecProcedures
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.63514F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.36486F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tableLayoutPanel10.Controls.Add(this.label6, 2, 1);
             this.tableLayoutPanel10.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.panel5, 1, 0);
@@ -336,7 +336,7 @@ namespace ExecProcedures
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(313, 139);
+            this.label6.Location = new System.Drawing.Point(312, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 6;
@@ -346,7 +346,7 @@ namespace ExecProcedures
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(313, 39);
+            this.label7.Location = new System.Drawing.Point(312, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 20);
             this.label7.TabIndex = 5;
@@ -356,7 +356,7 @@ namespace ExecProcedures
             // 
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(141, 3);
+            this.panel5.Location = new System.Drawing.Point(140, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(145, 93);
             this.panel5.TabIndex = 3;
@@ -374,7 +374,7 @@ namespace ExecProcedures
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(48, 40);
+            this.label10.Location = new System.Drawing.Point(47, 40);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 18);
             this.label10.TabIndex = 1;
@@ -395,7 +395,7 @@ namespace ExecProcedures
             // 
             this.panel6.Controls.Add(this.textBox6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(141, 102);
+            this.panel6.Location = new System.Drawing.Point(140, 102);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(145, 94);
             this.panel6.TabIndex = 4;
@@ -424,7 +424,7 @@ namespace ExecProcedures
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.95946F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.04054F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
             this.tableLayoutPanel9.Controls.Add(this.label9, 2, 1);
             this.tableLayoutPanel9.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel3, 1, 0);
@@ -466,7 +466,7 @@ namespace ExecProcedures
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(138, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(147, 93);
+            this.panel3.Size = new System.Drawing.Size(146, 93);
             this.panel3.TabIndex = 3;
             // 
             // textBox3
@@ -505,7 +505,7 @@ namespace ExecProcedures
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(138, 102);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(147, 93);
+            this.panel4.Size = new System.Drawing.Size(146, 93);
             this.panel4.TabIndex = 4;
             // 
             // textBox4
@@ -781,10 +781,11 @@ namespace ExecProcedures
             //string ProcedurePath = halconExamples + @"\hdevengine\procedures";
 
             //ProgramPathString = halconExamples + @"\hdevengine\hdevelop\fin_detection.hdev";
-
-            string ProcedurePath = "C:\\Users\\H3LEY\\Documents\\GitHub\\CU-TNS_LightGuide\\ExecProcedures\\vs2005\\hdev";
-            ProgramPathString = "C:\\Users\\H3LEY\\Documents\\GitHub\\CU-TNS_LightGuide\\ExecProcedures\\vs2005\\hdev\\Test_bubble.hdev";
-
+            string PathPJ = Environment.CurrentDirectory;
+            PathPJ = PathPJ.Replace("bin\\Debug", "");
+            string ProcedurePath = PathPJ + "\\hdev";
+            //ProgramPathString = "C:\\Users\\H3LEY\\Documents\\GitHub\\CU-TNS_LightGuide\\ExecProcedures\\vs2005\\hdev\\Test_bubble.hdev";
+            ProgramPathString = PathPJ + "\\hdev\\Test_bubble.hdev";
 
             if (!HalconAPI.isWindows)
             {
