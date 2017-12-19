@@ -216,7 +216,7 @@ namespace ExecProcedures
             this.ProcessBtn.Size = new System.Drawing.Size(94, 40);
             this.ProcessBtn.TabIndex = 7;
             this.ProcessBtn.Text = "Process";
-            this.ProcessBtn.Click += new System.EventHandler(this.InitAcqBtn_Click);
+            this.ProcessBtn.Click += new System.EventHandler(this.ProcessBtn_Click);
             // 
             // WindowControl
             // 
@@ -315,7 +315,7 @@ namespace ExecProcedures
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.63514F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.36486F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel10.Controls.Add(this.label6, 2, 1);
             this.tableLayoutPanel10.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.panel5, 1, 0);
@@ -336,7 +336,7 @@ namespace ExecProcedures
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(315, 139);
+            this.label6.Location = new System.Drawing.Point(313, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 6;
@@ -346,7 +346,7 @@ namespace ExecProcedures
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(315, 39);
+            this.label7.Location = new System.Drawing.Point(313, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 20);
             this.label7.TabIndex = 5;
@@ -356,9 +356,9 @@ namespace ExecProcedures
             // 
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(143, 3);
+            this.panel5.Location = new System.Drawing.Point(141, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(147, 93);
+            this.panel5.Size = new System.Drawing.Size(145, 93);
             this.panel5.TabIndex = 3;
             // 
             // textBox5
@@ -374,7 +374,7 @@ namespace ExecProcedures
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(49, 40);
+            this.label10.Location = new System.Drawing.Point(48, 40);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 18);
             this.label10.TabIndex = 1;
@@ -385,7 +385,7 @@ namespace ExecProcedures
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(50, 140);
+            this.label11.Location = new System.Drawing.Point(49, 140);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 18);
             this.label11.TabIndex = 2;
@@ -395,9 +395,9 @@ namespace ExecProcedures
             // 
             this.panel6.Controls.Add(this.textBox6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(143, 102);
+            this.panel6.Location = new System.Drawing.Point(141, 102);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(147, 94);
+            this.panel6.Size = new System.Drawing.Size(145, 94);
             this.panel6.TabIndex = 4;
             // 
             // textBox6
@@ -424,7 +424,7 @@ namespace ExecProcedures
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.95946F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.04054F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tableLayoutPanel9.Controls.Add(this.label9, 2, 1);
             this.tableLayoutPanel9.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel3, 1, 0);
@@ -444,7 +444,7 @@ namespace ExecProcedures
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(314, 138);
+            this.label9.Location = new System.Drawing.Point(312, 138);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 20);
             this.label9.TabIndex = 6;
@@ -454,7 +454,7 @@ namespace ExecProcedures
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(314, 39);
+            this.label8.Location = new System.Drawing.Point(312, 39);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 20);
             this.label8.TabIndex = 5;
@@ -464,9 +464,9 @@ namespace ExecProcedures
             // 
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(140, 3);
+            this.panel3.Location = new System.Drawing.Point(138, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(149, 93);
+            this.panel3.Size = new System.Drawing.Size(147, 93);
             this.panel3.TabIndex = 3;
             // 
             // textBox3
@@ -493,9 +493,9 @@ namespace ExecProcedures
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 139);
+            this.label5.Location = new System.Drawing.Point(3, 130);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 18);
+            this.label5.Size = new System.Drawing.Size(107, 36);
             this.label5.TabIndex = 2;
             this.label5.Text = "2. Black/White Dot";
             // 
@@ -503,9 +503,9 @@ namespace ExecProcedures
             // 
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(140, 102);
+            this.panel4.Location = new System.Drawing.Point(138, 102);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(149, 93);
+            this.panel4.Size = new System.Drawing.Size(147, 93);
             this.panel4.TabIndex = 4;
             // 
             // textBox4
@@ -569,6 +569,7 @@ namespace ExecProcedures
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(166, 24);
             this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "01";
             // 
             // panel2
             // 
@@ -593,12 +594,13 @@ namespace ExecProcedures
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "A1",
-            "A2",
-            "B1"});
+            "TEAA",
+            "TGHA",
+            "T3VA"});
             this.comboBox1.Location = new System.Drawing.Point(148, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(168, 26);
@@ -673,14 +675,14 @@ namespace ExecProcedures
             // 
             // Nglabel
             // 
-            this.Nglabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Nglabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Nglabel.AutoSize = true;
             this.Nglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nglabel.Location = new System.Drawing.Point(338, 0);
+            this.Nglabel.Location = new System.Drawing.Point(445, 0);
             this.Nglabel.Name = "Nglabel";
-            this.Nglabel.Size = new System.Drawing.Size(71, 39);
+            this.Nglabel.Size = new System.Drawing.Size(50, 39);
             this.Nglabel.TabIndex = 11;
-            this.Nglabel.Text = "NG";
+            this.Nglabel.Text = "...";
             // 
             // menuStrip1
             // 
@@ -726,7 +728,7 @@ namespace ExecProcedures
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ExecProceduresForm";
-            this.Text = "Execute Local and External HDevelop Procedures via HDevEngine";
+            this.Text = "CU-TNS Light Guide Inspection";
             this.Load += new System.EventHandler(this.ExecProceduresForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -819,24 +821,28 @@ namespace ExecProcedures
             LoadBtn.Enabled = false;
         }
 
-        private void InitAcqBtn_Click(object sender, System.EventArgs e)
+        private void ProcessBtn_Click(object sender, System.EventArgs e)
         {
             try
             {
                 // execute procedure
                 BubbleProcCall.SetInputIconicParamObject("Image", Image);
                 BubbleProcCall.Execute();
-                //Image = BubbleProcCall.GetOutputIconicParamImage("ImageWithCircle");
+                
+                // drew circle
                 CirclesRegion = BubbleProcCall.GetOutputIconicParamRegion("CircleRegion");
                 Image.DispObj(Window);
                 if (CirclesRegion.Area>0)
                 {
                     Window.SetColor("red");
                     Window.DispObj(CirclesRegion);
+                    Nglabel.Text = "NG";
+                    Nglabel.ForeColor = System.Drawing.Color.Red;
                 }
                 else
                 {
-                    Nglabel.Text = "55555555";
+                    Nglabel.Text = "OK";
+                    Nglabel.ForeColor = System.Drawing.Color.Green;
                 }
 
                 Window.SetPart(0, 0, -2, -2);
@@ -849,14 +855,7 @@ namespace ExecProcedures
                 MessageBox.Show(Ex.Message, "HDevEngine Exception");
                 return;
             }
-
-            //HImage ImageReduced = EnhanceImageProcCall.GetOutputIconicParamImage("ImageReduced");
-            //ImageReduced.DispObj(Window);
-            //ImageReduced.Dispose();
-
-            // enable ProcessImage button and disable InitAcq button
-            //ProcessImageBtn.Enabled = true;
-            //InitAcqBtn.Enabled = false;
+            
         }
 
         private void ProcessImageBtn_Click(object sender, System.EventArgs e)
