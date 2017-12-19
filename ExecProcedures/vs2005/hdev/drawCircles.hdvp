@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.1" halcon_version="13.0.1.1">
+<procedure name="drawCircles">
+<interface>
+<io>
+<par name="Image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="CircleRegion" base_type="iconic" dimension="0"/>
+</oo>
+<ic>
+<par name="Row" base_type="ctrl" dimension="0"/>
+<par name="Column" base_type="ctrl" dimension="0"/>
+</ic>
+<oc>
+<par name="i" base_type="ctrl" dimension="0"/>
+</oc>
+</interface>
+<body>
+<c>* Current graphics context settings:</c>
+<l>dev_set_color ('red')</l>
+<l>dev_set_draw ('margin')</l>
+<l>dev_set_line_width (2)</l>
+<l>dev_set_shape ('original')</l>
+<l>dev_set_lut ('default')</l>
+<l>dev_set_paint (['default'])</l>
+<c>* End of graphics context settings</c>
+<l>dev_clear_window()</l>
+<c></c>
+<l>dev_display(Image)</l>
+<l>gen_empty_region (CircleRegion)</l>
+<l>for i:=0 to |Row|-1 by 1</l>
+<l>    gen_circle (NewCircle, Row[i], Column[i], 50)</l>
+<l>    union2 (CircleRegion,NewCircle,CircleRegion)</l>
+<l>endfor</l>
+<c></c>
+<l>return ()</l>
+</body>
+<docu id="drawCircles">
+<parameters>
+<parameter id="CircleRegion"/>
+<parameter id="Column"/>
+<parameter id="Image"/>
+<parameter id="Row"/>
+<parameter id="i"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>

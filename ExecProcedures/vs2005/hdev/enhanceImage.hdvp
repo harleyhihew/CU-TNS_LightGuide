@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hdevelop file_version="1.1" halcon_version="13.0.1.1">
+<procedure name="enhanceImage">
+<interface>
+<io>
+<par name="Image" base_type="iconic" dimension="0"/>
+</io>
+<oo>
+<par name="GammaImage" base_type="iconic" dimension="0"/>
+<par name="Region" base_type="iconic" dimension="0"/>
+<par name="ImageReduced" base_type="iconic" dimension="0"/>
+</oo>
+</interface>
+<body>
+<l>gamma_image (Image, GammaImage, 0.416667, 0.055, 0.0031308, 255, 'true')</l>
+<l>threshold (GammaImage, Region, 34, 255)</l>
+<l>reduce_domain (GammaImage, Region, ImageReduced)</l>
+<l>return ()</l>
+</body>
+<docu id="enhanceImage">
+<parameters>
+<parameter id="GammaImage"/>
+<parameter id="Image"/>
+<parameter id="ImageReduced"/>
+<parameter id="Region"/>
+</parameters>
+</docu>
+</procedure>
+</hdevelop>
