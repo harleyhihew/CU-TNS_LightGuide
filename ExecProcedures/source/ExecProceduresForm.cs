@@ -98,6 +98,7 @@ namespace ExecProcedures
         private Button take_photo;
         private Button TestBtn;
         private Label Nglabel;
+        private Button runBtn;
         HRegion CirclesRegion = new HRegion();
 
         public ExecProceduresForm()
@@ -180,6 +181,7 @@ namespace ExecProcedures
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.runBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -202,7 +204,8 @@ namespace ExecProcedures
             // 
             // LoadBtn
             // 
-            this.LoadBtn.Location = new System.Drawing.Point(501, 81);
+            this.LoadBtn.Enabled = false;
+            this.LoadBtn.Location = new System.Drawing.Point(329, 81);
             this.LoadBtn.Name = "LoadBtn";
             this.LoadBtn.Size = new System.Drawing.Size(94, 40);
             this.LoadBtn.TabIndex = 4;
@@ -211,7 +214,7 @@ namespace ExecProcedures
             // 
             // ProcessBtn
             // 
-            this.ProcessBtn.Location = new System.Drawing.Point(743, 81);
+            this.ProcessBtn.Location = new System.Drawing.Point(546, 81);
             this.ProcessBtn.Name = "ProcessBtn";
             this.ProcessBtn.Size = new System.Drawing.Size(94, 40);
             this.ProcessBtn.TabIndex = 7;
@@ -315,7 +318,7 @@ namespace ExecProcedures
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.63514F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.36486F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel10.Controls.Add(this.label6, 2, 1);
             this.tableLayoutPanel10.Controls.Add(this.label7, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.panel5, 1, 0);
@@ -336,7 +339,7 @@ namespace ExecProcedures
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(312, 139);
+            this.label6.Location = new System.Drawing.Point(311, 139);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 20);
             this.label6.TabIndex = 6;
@@ -346,7 +349,7 @@ namespace ExecProcedures
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(312, 39);
+            this.label7.Location = new System.Drawing.Point(311, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 20);
             this.label7.TabIndex = 5;
@@ -356,9 +359,9 @@ namespace ExecProcedures
             // 
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(140, 3);
+            this.panel5.Location = new System.Drawing.Point(139, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(145, 93);
+            this.panel5.Size = new System.Drawing.Size(143, 93);
             this.panel5.TabIndex = 3;
             // 
             // textBox5
@@ -385,7 +388,7 @@ namespace ExecProcedures
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(49, 140);
+            this.label11.Location = new System.Drawing.Point(48, 140);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 18);
             this.label11.TabIndex = 2;
@@ -395,9 +398,9 @@ namespace ExecProcedures
             // 
             this.panel6.Controls.Add(this.textBox6);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(140, 102);
+            this.panel6.Location = new System.Drawing.Point(139, 102);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(145, 94);
+            this.panel6.Size = new System.Drawing.Size(143, 94);
             this.panel6.TabIndex = 4;
             // 
             // textBox6
@@ -424,7 +427,7 @@ namespace ExecProcedures
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.95946F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.04054F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel9.Controls.Add(this.label9, 2, 1);
             this.tableLayoutPanel9.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.panel3, 1, 0);
@@ -444,7 +447,7 @@ namespace ExecProcedures
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(312, 138);
+            this.label9.Location = new System.Drawing.Point(310, 138);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 20);
             this.label9.TabIndex = 6;
@@ -454,7 +457,7 @@ namespace ExecProcedures
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(312, 39);
+            this.label8.Location = new System.Drawing.Point(310, 39);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 20);
             this.label8.TabIndex = 5;
@@ -464,9 +467,9 @@ namespace ExecProcedures
             // 
             this.panel3.Controls.Add(this.textBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(138, 3);
+            this.panel3.Location = new System.Drawing.Point(136, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(146, 93);
+            this.panel3.Size = new System.Drawing.Size(145, 93);
             this.panel3.TabIndex = 3;
             // 
             // textBox3
@@ -503,9 +506,9 @@ namespace ExecProcedures
             // 
             this.panel4.Controls.Add(this.textBox4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(138, 102);
+            this.panel4.Location = new System.Drawing.Point(136, 102);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(146, 93);
+            this.panel4.Size = new System.Drawing.Size(145, 93);
             this.panel4.TabIndex = 4;
             // 
             // textBox4
@@ -624,17 +627,19 @@ namespace ExecProcedures
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel7.ColumnCount = 4;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel7.ColumnCount = 5;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.34251F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.65749F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 199F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
             this.tableLayoutPanel7.Controls.Add(this.ProcessBtn, 3, 1);
             this.tableLayoutPanel7.Controls.Add(this.LoadBtn, 2, 1);
             this.tableLayoutPanel7.Controls.Add(this.TestBtn, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.connect_camera, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.take_photo, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.Nglabel, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.Nglabel, 4, 0);
+            this.tableLayoutPanel7.Controls.Add(this.runBtn, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(25, 517);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
@@ -647,11 +652,11 @@ namespace ExecProcedures
             // 
             this.TestBtn.Location = new System.Drawing.Point(3, 3);
             this.TestBtn.Name = "TestBtn";
-            this.TestBtn.Size = new System.Drawing.Size(75, 23);
+            this.TestBtn.Size = new System.Drawing.Size(84, 36);
             this.TestBtn.TabIndex = 10;
             this.TestBtn.Text = "Test";
             this.TestBtn.UseVisualStyleBackColor = true;
-            this.TestBtn.Click += new System.EventHandler(this.button1_Click);
+            this.TestBtn.Click += new System.EventHandler(this.testBtn_Click);
             // 
             // connect_camera
             // 
@@ -665,7 +670,7 @@ namespace ExecProcedures
             // 
             // take_photo
             // 
-            this.take_photo.Location = new System.Drawing.Point(252, 81);
+            this.take_photo.Location = new System.Drawing.Point(148, 81);
             this.take_photo.Name = "take_photo";
             this.take_photo.Size = new System.Drawing.Size(94, 44);
             this.take_photo.TabIndex = 9;
@@ -675,10 +680,10 @@ namespace ExecProcedures
             // 
             // Nglabel
             // 
-            this.Nglabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Nglabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Nglabel.AutoSize = true;
             this.Nglabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nglabel.Location = new System.Drawing.Point(445, 0);
+            this.Nglabel.Location = new System.Drawing.Point(790, 0);
             this.Nglabel.Name = "Nglabel";
             this.Nglabel.Size = new System.Drawing.Size(50, 39);
             this.Nglabel.TabIndex = 11;
@@ -721,6 +726,16 @@ namespace ExecProcedures
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // runBtn
+            // 
+            this.runBtn.Location = new System.Drawing.Point(148, 3);
+            this.runBtn.Name = "runBtn";
+            this.runBtn.Size = new System.Drawing.Size(94, 51);
+            this.runBtn.TabIndex = 3;
+            this.runBtn.Text = "Run All Process";
+            this.runBtn.UseVisualStyleBackColor = true;
+            this.runBtn.Click += new System.EventHandler(this.runBtn_Click);
+            // 
             // ExecProceduresForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -729,6 +744,7 @@ namespace ExecProcedures
             this.Controls.Add(this.menuStrip1);
             this.Name = "ExecProceduresForm";
             this.Text = "CU-TNS Light Guide Inspection";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ExecProceduresForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -923,23 +939,33 @@ namespace ExecProcedures
                  -1, "default", -1, "false", "default", "26760155C2DB_Basler_acA250014um", 0, -1);
             connect_camera.Enabled = false;
         }
+
         private void take_photo_Click(object sender, EventArgs e)
         {
             //HImage Image2 = new HImage();
             Image.GrabImageAsync(Framegrabber, -1);
             Window.DispObj(Image);
             Window.SetPart(0, 0, -2, -2);
+            Nglabel.Text = "...";
+            LoadBtn.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void testBtn_Click(object sender, EventArgs e)
         {
-            //HImage Image2 = new HImage();
             Framegrabber = new HFramegrabber();
-            //Framegrabber.OpenFramegrabber("USB3Vision", 0, 0, 0, 0, 0, 0, "progressive",
-            //     -1, "default", -1, "false", "default", "26760155C2DB_Basler_acA250014um", 0, -1);
             Framegrabber.OpenFramegrabber("File", 1, 1, 0, 0, 0, 0, "default",
                   -1, "default", "default", "default", "C:/Users/H3LEY/Desktop/211160/bubble_3.tif", "default", -1, -1);
-            //connect_camera.Enabled = false;
+            connect_camera.Enabled = false;
+        }
+
+
+        private void runBtn_Click(object sender, EventArgs e)
+        {
+            take_photo_Click(sender, e);
+            LoadBtn_Click(sender,e);
+            ProcessBtn_Click(sender, e);
+            LoadBtn.Enabled = false;
+
         }
     }
 }
