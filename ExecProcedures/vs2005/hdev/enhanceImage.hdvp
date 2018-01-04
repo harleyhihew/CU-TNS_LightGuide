@@ -6,23 +6,20 @@
 <par name="Image" base_type="iconic" dimension="0"/>
 </io>
 <oo>
-<par name="GammaImage" base_type="iconic" dimension="0"/>
-<par name="Region" base_type="iconic" dimension="0"/>
 <par name="ImageReduced" base_type="iconic" dimension="0"/>
 </oo>
 </interface>
 <body>
+<l>get_image_pointer1 (Image, Pointer, Type, Width, Height)</l>
 <l>gamma_image (Image, GammaImage, 0.416667, 0.055, 0.0031308, 255, 'true')</l>
-<l>threshold (GammaImage, Region, 34, 255)</l>
-<l>reduce_domain (GammaImage, Region, ImageReduced)</l>
+<l>threshold (GammaImage, InterestedRegion, 34, 255)</l>
+<l>reduce_domain (GammaImage, InterestedRegion, ImageReduced)</l>
 <l>return ()</l>
 </body>
 <docu id="enhanceImage">
 <parameters>
-<parameter id="GammaImage"/>
 <parameter id="Image"/>
 <parameter id="ImageReduced"/>
-<parameter id="Region"/>
 </parameters>
 </docu>
 </procedure>

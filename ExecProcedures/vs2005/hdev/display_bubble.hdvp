@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hdevelop file_version="1.1" halcon_version="13.0.1.1">
-<procedure name="drawCircles">
+<procedure name="display_bubble">
 <interface>
 <io>
+<par name="Bubble" base_type="iconic" dimension="0"/>
 <par name="Image" base_type="iconic" dimension="0"/>
 </io>
 <oo>
 <par name="Circle" base_type="iconic" dimension="0"/>
+<par name="setOfcircle" base_type="iconic" dimension="1"/>
 </oo>
-<ic>
-<par name="Row" base_type="ctrl" dimension="0"/>
-<par name="Column" base_type="ctrl" dimension="0"/>
-</ic>
-<oc>
-<par name="i" base_type="ctrl" dimension="0"/>
-</oc>
 </interface>
 <body>
+<l>setOfcircle := {}</l>
+<l>area_center(Bubble, Area, Row, Column)</l>
 <c>* Current graphics context settings:</c>
 <l>dev_set_color ('red')</l>
 <l>dev_set_draw ('margin')</l>
@@ -26,20 +23,20 @@
 <l>dev_set_paint (['default'])</l>
 <c>* End of graphics context settings</c>
 <l>dev_clear_window()</l>
-<c></c>
 <l>dev_display(Image)</l>
 <l>for i:=0 to |Row|-1 by 1</l>
-<l>    gen_circle (Circle, Row[i], Column[i], 20)</l>
+<l>    gen_circle (Circle, Row[i], Column[i], 40)</l>
+<l>    setOfcircle.insert(i,Circle)</l>
+<l>    dev_display (Circle)</l>
 <l>endfor</l>
 <l>return ()</l>
 </body>
-<docu id="drawCircles">
+<docu id="display_bubble">
 <parameters>
+<parameter id="Bubble"/>
 <parameter id="Circle"/>
-<parameter id="Column"/>
 <parameter id="Image"/>
-<parameter id="Row"/>
-<parameter id="i"/>
+<parameter id="setOfcircle"/>
 </parameters>
 </docu>
 </procedure>

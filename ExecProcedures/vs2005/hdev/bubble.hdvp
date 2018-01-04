@@ -6,52 +6,24 @@
 <par name="Image" base_type="iconic" dimension="0"/>
 </io>
 <oo>
-<par name="GammaImage" base_type="iconic" dimension="0"/>
-<par name="Region" base_type="iconic" dimension="0"/>
-<par name="ImageReduced" base_type="iconic" dimension="0"/>
-<par name="Region1" base_type="iconic" dimension="0"/>
-<par name="ConnectedRegions" base_type="iconic" dimension="0"/>
-<par name="SelectedRegions" base_type="iconic" dimension="0"/>
-<par name="SelectedRegions1" base_type="iconic" dimension="0"/>
-<par name="ConnectedRegions1" base_type="iconic" dimension="0"/>
-<par name="CircleRegion" base_type="iconic" dimension="0"/>
+<par name="Circle" base_type="iconic" dimension="0"/>
+<par name="setOfcircle" base_type="iconic" dimension="1"/>
 </oo>
-<oc>
-<par name="UsedThreshold" base_type="ctrl" dimension="0"/>
-<par name="Area" base_type="ctrl" dimension="0"/>
-<par name="Row" base_type="ctrl" dimension="0"/>
-<par name="Column" base_type="ctrl" dimension="0"/>
-<par name="i" base_type="ctrl" dimension="0"/>
-</oc>
 </interface>
 <body>
-<c>* enhance image</c>
-<l>enhanceImage (Image, GammaImage, Region, ImageReduced)</l>
-<c></c>
-<c>* find bubble</c>
-<l>FindBubble (ImageReduced, Region1, ConnectedRegions, SelectedRegions, SelectedRegions1, ConnectedRegions1, UsedThreshold, Area, Row, Column)</l>
-<c></c>
-<c>* draw circles</c>
-<l>drawCircles (Image, CircleRegion, Row, Column, i)</l>
+<c>* enhancedImage</c>
+<l>enhanceImage (Image, ImageReduced)</l>
+<c>* findBubble</c>
+<l>findBubble (ImageReduced, Bubble)</l>
+<c>* disp_bubble</c>
+<l>display_bubble (Bubble, Image, Circle,setOfcircle)</l>
 <l>return ()</l>
 </body>
 <docu id="bubble">
 <parameters>
-<parameter id="Area"/>
-<parameter id="CircleRegion"/>
-<parameter id="Column"/>
-<parameter id="ConnectedRegions"/>
-<parameter id="ConnectedRegions1"/>
-<parameter id="GammaImage"/>
+<parameter id="Circle"/>
 <parameter id="Image"/>
-<parameter id="ImageReduced"/>
-<parameter id="Region"/>
-<parameter id="Region1"/>
-<parameter id="Row"/>
-<parameter id="SelectedRegions"/>
-<parameter id="SelectedRegions1"/>
-<parameter id="UsedThreshold"/>
-<parameter id="i"/>
+<parameter id="setOfcircle"/>
 </parameters>
 </docu>
 </procedure>

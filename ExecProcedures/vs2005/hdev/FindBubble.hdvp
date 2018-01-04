@@ -1,46 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hdevelop file_version="1.1" halcon_version="13.0.1.1">
-<procedure name="FindBubble">
+<procedure name="findBubble">
 <interface>
 <io>
 <par name="ImageReduced" base_type="iconic" dimension="0"/>
 </io>
 <oo>
-<par name="Region1" base_type="iconic" dimension="0"/>
-<par name="ConnectedRegions" base_type="iconic" dimension="0"/>
-<par name="SelectedRegions" base_type="iconic" dimension="0"/>
-<par name="SelectedRegions1" base_type="iconic" dimension="0"/>
-<par name="ConnectedRegions1" base_type="iconic" dimension="0"/>
+<par name="Bubble" base_type="iconic" dimension="0"/>
 </oo>
-<oc>
-<par name="UsedThreshold" base_type="ctrl" dimension="0"/>
-<par name="Area" base_type="ctrl" dimension="0"/>
-<par name="Row" base_type="ctrl" dimension="0"/>
-<par name="Column" base_type="ctrl" dimension="0"/>
-</oc>
 </interface>
 <body>
-<l>binary_threshold (ImageReduced, Region1, 'max_separability', 'dark', UsedThreshold)</l>
-<l>fill_up_shape (Region1, Region1, 'inner_circle', 0, 0.8)</l>
-<l>connection(Region1, ConnectedRegions)</l>
-<l>select_shape (ConnectedRegions, SelectedRegions, 'holes_num', 'and', 0.9018, 1)</l>
-<l>select_shape (SelectedRegions, SelectedRegions1, 'circularity', 'and', 0.26927, 0.5)</l>
-<l>connection (SelectedRegions1, ConnectedRegions1)</l>
-<l>area_center(ConnectedRegions1, Area, Row, Column)</l>
+<l>binary_threshold (ImageReduced, edge, 'max_separability', 'dark', UsedThreshold)</l>
+<l>fill_up_shape (edge, edge, 'inner_circle', 0, 0.8)</l>
+<l>erosion_circle (edge, edge, 2)</l>
+<l>connection(edge, ConnectedRegions)</l>
+<l>select_shape (ConnectedRegions, OneHoleRegion, 'holes_num', 'and', 0.9018, 1)</l>
+<l>select_shape (OneHoleRegion, smallHoleAreaRegion, 'area_holes', 'and', 0, 1500)</l>
+<l>select_shape (smallHoleAreaRegion, bubbleRegion, 'inner_radius', 'and', 0, 28)</l>
+<l>* select_shape (SelectedRegions, SelectedRegions1, 'circularity', 'and', 0.26927, 0.5)</l>
+<l>connection (bubbleRegion, Bubble)</l>
 <l>return ()</l>
 </body>
-<docu id="FindBubble">
+<docu id="findBubble">
 <parameters>
-<parameter id="Area"/>
-<parameter id="Column"/>
-<parameter id="ConnectedRegions"/>
-<parameter id="ConnectedRegions1"/>
+<parameter id="Bubble"/>
 <parameter id="ImageReduced"/>
-<parameter id="Region1"/>
-<parameter id="Row"/>
-<parameter id="SelectedRegions"/>
-<parameter id="SelectedRegions1"/>
-<parameter id="UsedThreshold"/>
 </parameters>
 </docu>
 </procedure>
